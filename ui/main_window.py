@@ -6,6 +6,7 @@ from PySide6.QtWidgets import (
 from ui.input_tab import InputTab
 from ui.results_tab import ResultsTab
 from ui.analytics_tab import AnalyticsTab
+from ui.help_tab import HelpTab
 from core.loader import load_interns, load_facilities
 from core.distributor import distribute, apply_overflow_action
 import pandas as pd
@@ -74,6 +75,7 @@ class MainWindow(QMainWindow):
         tabs.addTab(self._input_tab, "Input")
         tabs.addTab(self._results_tab, "Results")
         tabs.addTab(self._analytics_tab, "Analytics")
+        tabs.addTab(HelpTab(), "Help")
 
         self._tabs = tabs
 
